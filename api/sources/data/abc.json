@@ -1,0 +1,48 @@
+{
+    "person":{
+        "firstname": "John",
+        "lastname": "Doe",
+        "birthdate":"25/08/1982",
+        "birthplace":{
+                "city": "Mordor",
+                "country": "",
+                "state":"",
+                "zipcode":""
+        },
+        "education":[{
+            "title":"Master in Software Development",
+            "subject": "Machine Learning",
+            "subjects":["Machine Learning", "Software Development"],
+            "year": 2009,
+            "place":{
+                "city": "Oslo",
+                "country":"Norway",
+                "state": "Oslo",
+                "zipcode": "1156"
+            },
+            "thesis":{
+                "title": "Abc",
+                "summary": "This is a master thesis"
+            }
+        }],
+        "work_experience":[{
+            "from_date":"25/08/1982",
+            "to_date":"26/08/1982",
+            "summary":"This is a job",
+            "name":"Abc A/S",
+            "title": "Developer",
+            "sector": "Education",
+            "keywords": ["Python", "Web", "HTML5"]
+        }],
+        "contacts":{
+            "public":[{
+                "type":"email",
+                "email": "abc@example.com"
+            }],
+            "private":[{
+                "type": "linkedin",
+                "url": "http://example.com"
+            }]
+        }
+    }
+}
