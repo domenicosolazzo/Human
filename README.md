@@ -18,7 +18,13 @@ pip install -r requirements.txt
 ```
 export HUMAN_DATA_SOURCE_TYPE=JSON
 ```
-
+RUN
+=======
+- Create a new virtualenv
+```
+cd Human/
+python app.py
+```
 
 TESTING
 =======
