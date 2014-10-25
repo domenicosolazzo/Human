@@ -20,7 +20,6 @@ export HUMAN_DATA_SOURCE_TYPE=JSON
 ```
 RUN
 =======
-- Create a new virtualenv
 ```
 cd Human/
 python app.py
