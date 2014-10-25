@@ -1,5 +1,5 @@
 from nose.tools import *
-from Human.lib.models.person import Person
+from Human.api.models.person import Person
 
 def test_person():
     data = {

@@ -1,5 +1,5 @@
 from nose.tools import *
-from Human.lib.models.place import Place
+from Human.api.models.place import Place
 
 def test_place():
     data = {

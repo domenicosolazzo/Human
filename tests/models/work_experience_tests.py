@@ -1,5 +1,5 @@
 from nose.tools import *
-from Human.lib.models.work_experience import Employer, Place
+from Human.api.models.work_experience import Employer, Place
 
 def test_employer():
     data = {

@@ -1,5 +1,5 @@
 from nose.tools import *
-from Human.lib.models.education import Thesis, Degree
+from Human.api.models.education import Thesis, Degree
 
 def test_thesis():
     t_data = {"title":"test", "summary":"test_summary"}
