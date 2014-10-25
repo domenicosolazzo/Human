@@ -1,6 +1,7 @@
 from work_experience import Employer
 from education import Degree
 from place import Place
+from contact import Contact
 class Person(object):
     """
     Person model
@@ -11,6 +12,7 @@ class Person(object):
     lastname = ""
     birthdate = ""
     birthplace = ""
+    contacts = []
 
     def __init__(self, data):
         self.__initialization(data)
@@ -37,6 +39,11 @@ class Person(object):
         if isinstance(degrees, list):
             for degree in degrees:
                 self.education.append(Degree(degree))
+
+        contacts = data.get('contacts', [])
+        if isinstance(contacts, list):
+            for contact in contacts:
+                self.contacts.append(Contact.get_instance(data))
 
 
 

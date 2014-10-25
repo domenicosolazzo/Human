@@ -7,9 +7,13 @@ class Contact(object):
             self.is_public = public
 
     @staticmethod
-    def get_instance(contact_type, optional_args):
+    def get_instance(data):
+        contact_type = data.get('type', None)
+        if contact_type is None:
+            raise Exception("The contact type is not valid")
+
         if contact_type == "email":
-            return EmailContact(optional_args)
+            return EmailContact(data)
         else:
             raise Exception("Contact type is not available")
 
