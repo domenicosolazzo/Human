@@ -18,3 +18,13 @@ pip install -r requirements.txt
 ```
 export HUMAN_DATA_SOURCE_TYPE=JSON
 ```
+
+
+TESTING
+=======
+Use nosetests for running your unit tests or whatever you prefer ;)
+```
+cd Human/
+nosetests
+```
+
