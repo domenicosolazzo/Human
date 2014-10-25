@@ -1,5 +1,10 @@
 from nose.tools import *
 from Human.api.models.contact import Contact, EmailContact
+"""
+Contact
+"""
+def test_get_instance_raises_exception():
+    assert_raises(Exception, Contact.get_instance, "type-not-exists", {})
 
 """
 Email Contact

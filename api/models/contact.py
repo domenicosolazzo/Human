@@ -10,6 +10,8 @@ class Contact(object):
     def get_instance(contact_type, optional_args):
         if contact_type == "email":
             return EmailContact(optional_args)
+        else:
+            raise Exception("Contact type is not available")
 
 
 
