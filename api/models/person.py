@@ -43,7 +43,7 @@ class Person(object):
         contacts = data.get('contacts', [])
         if isinstance(contacts, list):
             for contact in contacts:
-                self.contacts.append(Contact.get_instance(data))
+                self.contacts.append(Contact.get_instance(contact))
 
 
 

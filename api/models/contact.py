@@ -9,6 +9,7 @@ class Contact(object):
     @staticmethod
     def get_instance(data):
         contact_type = data.get('type', None)
+        
         if contact_type is None:
             raise Exception("The contact type is not valid")
 
