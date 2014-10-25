@@ -1,5 +1,5 @@
 from nose.tools import *
-from Human.api.models.contact import Contact, EmailContact
+from human.core.api.models.contact import Contact, EmailContact
 """
 Contact
 """

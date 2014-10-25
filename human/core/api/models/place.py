@@ -16,3 +16,12 @@ class Place(object):
         self.zipcode = data.get('zipcode', None)
         self.lat = data.get('lat', None)
         self.lng = data.get('lng', None)
+    def to_json(self):
+        return {
+            'name': self.name,
+            'country': self.country,
+            'state': self.state,
+            'zipcode': self.zipcode,
+            'lat': self.lat,
+            'lng': self.lng
+        }

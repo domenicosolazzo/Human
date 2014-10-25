@@ -1,6 +1,6 @@
 from nose.tools import *
-from Human.api.human_facade import HumanFacade
-from Human.api.models.person import Person
+from human.core.api.human_facade import HumanFacade
+from human.core.api.models.person import Person
 
 def test_fetch_existing_person():
     human_id = "abc"

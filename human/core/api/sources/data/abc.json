@@ -4,10 +4,10 @@
         "lastname": "Doe",
         "birthdate":"25/08/1982",
         "birthplace":{
-                "city": "Mordor",
-                "country": "",
-                "state":"",
-                "zipcode":""
+                "name": "Asti",
+                "country": "25/08/1982",
+                "state":"Asti",
+                "zipcode":"14100"
         },
         "education":[{
             "title":"Master in Software Development",
@@ -15,7 +15,7 @@
             "subjects":["Machine Learning", "Software Development"],
             "year": 2009,
             "place":{
-                "city": "Oslo",
+                "name": "Oslo",
                 "country":"Norway",
                 "state": "Oslo",
                 "zipcode": "1156"
@@ -34,15 +34,12 @@
             "sector": "Education",
             "keywords": ["Python", "Web", "HTML5"]
         }],
-        "contacts":{
-            "public":[{
-                "type":"email",
-                "email": "abc@example.com"
-            }],
-            "private":[{
-                "type": "linkedin",
-                "url": "http://example.com"
-            }]
-        }
+        "contacts":[
+            {
+                "email": "abc@example.com",
+                "type": "email",
+                "is_public": true
+            }
+        ]
     }
 }

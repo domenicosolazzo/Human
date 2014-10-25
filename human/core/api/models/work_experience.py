@@ -27,3 +27,15 @@ class Employer(object):
         place = data.get('place', None)
         if place is not None:
             self.place = Place(place)
+
+    def to_json(self):
+        return {
+            'name': self.name,
+            'title': self.title,
+            'sector': self.sector,
+            'from_date': self.from_date,
+            'to_date': self.to_date,
+            'summary': self.summary,
+            'keywords': self.keywords,
+            'place': self.place.to_json() if not self.place is None else None
+        }

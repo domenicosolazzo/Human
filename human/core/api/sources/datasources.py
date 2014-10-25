@@ -27,6 +27,6 @@ class JSONSource(DataSource):
         try:
             with open(person_file) as f:
                 person_json = json.load(f)
-                return person_json
+                return person_json.get('person', None)
         except:
             raise Exception("Person not found")

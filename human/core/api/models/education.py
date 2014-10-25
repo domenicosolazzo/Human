@@ -22,6 +22,16 @@ class Degree(object):
         place = data.get('place', None)
         if not place is None:
             self.place = Place(place)
+    def to_json(self):
+        return {
+            'title': self.title,
+            'subject': self.subject,
+            'year': self.year,
+            'subjects': self.subjects,
+            'thesis': self.thesis.to_json(),
+            'place': self.place.to_json() if not self.place is None else None
+        }
+
 
 
 class Thesis(object):
@@ -36,3 +46,9 @@ class Thesis(object):
             return None
         self.title = data.get('title', '')
         self.summary = data.get('summary', '')
+
+    def to_json(self):
+        return {
+            'title': self.title,
+            'summary': self.summary
+        }

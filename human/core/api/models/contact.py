@@ -9,7 +9,7 @@ class Contact(object):
     @staticmethod
     def get_instance(data):
         contact_type = data.get('type', None)
-        
+
         if contact_type is None:
             raise Exception("The contact type is not valid")
 
@@ -17,6 +17,12 @@ class Contact(object):
             return EmailContact(data)
         else:
             raise Exception("Contact type is not available")
+
+    def to_json(self):
+        return {
+            "is_public": self.is_public,
+            "type": self.contact_type
+        }
 
 
 
@@ -27,3 +33,8 @@ class EmailContact(Contact):
         super(EmailContact, self).__init__(data)
         self.email = data.get('email', '')
         self.contact_type = "email"
+
+    def to_json(self):
+        json_obj = super(EmailContact, self).to_json()
+        json_obj['email'] = self.email
+        return json_obj

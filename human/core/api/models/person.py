@@ -22,7 +22,7 @@ class Person(object):
             raise Exception("Data is invalid")
 
         self.firstname = data.get('firstname', None)
-        self.lastname = data.get('lastname', None)
+        self.lastname = data.get(u'lastname', None)
         self.birthdate = data.get('birthdate', None)
         birthplace = data.get('birthplace', None)
         if birthplace is not None:
@@ -44,6 +44,23 @@ class Person(object):
         if isinstance(contacts, list):
             for contact in contacts:
                 self.contacts.append(Contact.get_instance(contact))
+
+    def to_json(self):
+        return {
+            "firstname": self.firstname,
+            "lastname": self.lastname,
+            "birth":{
+                "date": self.birthdate,
+                "place": self.birthplace.to_json()
+            },
+            'education': [degree.to_json() for degree in self.education],
+            'work_experience': [employer.to_json() for employer in self.work_experience],
+            'contacts': [contact.to_json() for contact in self.contacts]
+        }
+
+
+
+
 
 
 
