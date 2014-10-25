@@ -18,6 +18,12 @@ pip install -r requirements.txt
 ```
 export HUMAN_DATA_SOURCE_TYPE=JSON
 ```
+- Change the json file for your data source
+```
+cd Human/human/core/api/sources/data
+vim me.json
+```
+
 RUN
 =======
 ```

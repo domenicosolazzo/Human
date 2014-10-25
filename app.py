@@ -9,7 +9,7 @@ app.json_encoder = CustomJSONEncoder
 @app.route('/')
 def hello_world():
     facade = HumanFacade()
-    person = facade.fetch_person("abc")
+    person = facade.fetch_person("me")
 
     return jsonify(data=person)
 
